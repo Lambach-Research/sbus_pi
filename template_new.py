@@ -2,12 +2,13 @@ import read_sbus_from_GPIO
 import time
 from sbus_writer import SbusWriter  # Assuming the SbusWriter class is in a file named sbus_writer.py
 
-SBUS_PIN = 4  # pin where sbus wire is plugged in
+WRITE_PIN = 4  # pin where sbus wire is plugged in to send data
+READ_PIN = 27  # pin where sbus wire is plugged in to read data
 
-reader = read_sbus_from_GPIO.SbusReader(SBUS_PIN)
+reader = read_sbus_from_GPIO.SbusReader(READ_PIN) 
 reader.begin_listen()
 
-writer = SbusWriter(SBUS_PIN)  # Create an instance of the SbusWriter class
+writer = SbusWriter(WRITE_PIN)
 
 # wait until connection is established
 while(not reader.is_connected()):
