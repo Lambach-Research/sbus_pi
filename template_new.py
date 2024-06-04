@@ -28,7 +28,7 @@ while True:
 
         #
         # Do something with data here!
-        # ex:print(f'{channel_data[0]}')
+        print(f'{channel_data[0]}')
         #
 
         # Send the channel data over SBUS
