@@ -28,7 +28,7 @@ while True:
 
         #
         # Do something with data here!
-        print(f'{channel_data[0]}')
+        print(f'I received {channel_data[0]}')
         #
 
         # Send the channel data over SBUS
